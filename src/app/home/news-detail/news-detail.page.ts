@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../../service/news.service'
 import { ActivatedRoute } from "@angular/router";
+import { HomeInt } from "../../interface/home.interface";
 @Component({
   selector: 'app-news-detail',
   templateUrl: './news-detail.page.html',
   styleUrls: ['./news-detail.page.scss'],
 })
 export class NewsDetailPage implements OnInit {
-  newsValue: object[];
+  newsValue: HomeInt;
   constructor(private newService: NewsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
