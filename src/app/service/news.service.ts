@@ -11,4 +11,8 @@ export class NewsService {
   getNews():Observable<any>{
     return this.http.get(`https://www.circuitricardotormo.com/wp-json/wp/v2/posts?page=1&per_page=15&_embed`);
   }
+
+  getNewId(id:string):any{
+    return this.http.get(`https://www.circuitricardotormo.com/wp-json/wp/v2/posts/${id}?_embedbed?`);
+  }
 }
