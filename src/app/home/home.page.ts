@@ -16,8 +16,8 @@ ngOnInit(){
   this.newService.getNews().subscribe(value=>{
     this.news = value;
     this.newIMG = this.news[0]['_embedded']['wp:featuredmedia'][0]['media_details']['file'];
-    // console.log(this.news)
-    // console.log(this.newArray)
+    console.log(this.news)
+
   })
 }
 }
