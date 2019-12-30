@@ -13,7 +13,6 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.newService.getNews().subscribe(value => {
       this.news = value;
-      console.log(this.news)
     })
   };
 

@@ -15,7 +15,6 @@ export class NewsDetailPage implements OnInit {
     this.route.params.subscribe(params => {
       this.newService.getNewId(params.id).subscribe(value => {
         this.newsValue = value;
-        // console.log(this.newsValue)
       })
     })
 

@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list *ngFor="let new of news" [routerLink]='["/news-detail", new.id]'>
+  <ion-list *ngFor="let new of news" [routerLink]='["/news-detail", new["id"]]'>
     <ion-item>
       <ion-avatar slot="start" *ngFor="let item of new['_embedded']['wp:featuredmedia']">
         <ion-img *ngIf="item.source_url; else noImage" src="{{item.source_url}}"></ion-img>
@@ -16,8 +16,8 @@
         </ng-template>
       </ion-avatar>
       <ion-label *ngIf="new">
-        <h2>{{new.title.rendered}}</h2>
-        <h3>{{new.date | date :'dd/MM/yyyy HH:mm'}}</h3>
+        <h2>{{new['title']['rendered']}}</h2>
+        <h3>{{new['date ']| date :'dd/MM/yyyy HH:mm'}}</h3>
       </ion-label>
 
     </ion-item>
