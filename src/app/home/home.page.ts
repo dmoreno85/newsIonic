@@ -15,6 +15,4 @@ export class HomePage implements OnInit {
       this.news = value;
     })
   };
-
-
 }
